@@ -1,4 +1,6 @@
-/* Reset */
+/* =========================
+   Reset
+========================= */
 
 * {
     margin: 0;
@@ -6,7 +8,9 @@
     box-sizing: border-box;
 }
 
-/* Body */
+/* =========================
+   Body
+========================= */
 
 body {
     font-family: Arial, Helvetica, sans-serif;
@@ -14,36 +18,182 @@ body {
     color: white;
     line-height: 1.6;
 }
+
+/* =========================
+   Header
+========================= */
+
 header {
     background: #102a4d;
     padding: 20px;
     text-align: center;
+    position: sticky;
+    top: 0;
 }
 
 header h1 {
-    font-size: 2.5rem;
+    font-size: 2.6rem;
     margin-bottom: 15px;
 }
+
+/* =========================
+   Navigation
+========================= */
+
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
     gap: 30px;
+    flex-wrap: wrap;
 }
 
 nav a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    transition: .3s;
 }
 
-nav a:hover {
+nav a:hover,
+nav a:focus {
     color: #8cc8ff;
 }
-.hero-image {
+
+/* =========================
+   Sections
+========================= */
+
+section {
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto;
+    background: #12335b;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+/* =========================
+   Hero
+========================= */
+
+.hero h2 {
+    margin-top: 20px;
+    font-size: 2rem;
+}
+
+.hero p {
+    margin: 20px 0;
+}
+
+/* =========================
+   Images
+========================= */
+
+.hero-image,
+section img {
     width: 100%;
     max-width: 700px;
     display: block;
     margin: 20px auto;
     border-radius: 12px;
+}
+
+/* =========================
+   Headings
+========================= */
+
+h2 {
+    margin-bottom: 20px;
+    color: #8cc8ff;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+/* =========================
+   Buttons
+========================= */
+
+button {
+    background: #8cc8ff;
+    color: #081b33;
+    border: none;
+    padding: 12px 28px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+button:hover {
+    background: white;
+    transform: scale(1.05);
+}
+
+button:focus {
+    outline: 3px solid white;
+    outline-offset: 3px;
+}
+
+/* =========================
+   Reflection Messages
+========================= */
+
+#message,
+#quote,
+#actionMessage {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* =========================
+   Footer
+========================= */
+
+footer {
+    background: #102a4d;
+    text-align: center;
+    padding: 30px;
+    margin-top: 50px;
+}
+
+footer h3 {
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin: 8px 0;
+}
+
+/* =========================
+   Responsive Design
+========================= */
+
+@media (max-width: 768px) {
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    section {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .hero h2 {
+        font-size: 1.6rem;
+    }
+
+    button {
+        width: 100%;
+    }
+
 }
